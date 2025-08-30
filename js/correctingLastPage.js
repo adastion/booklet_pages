@@ -1,8 +1,13 @@
 import { data } from "../data/data.js";
 
-const { allPages } = data;
+export function correctingLastPage() {
+  const { pagesForPrint, allPages, resultArray } = data;
 
-export function correctingLastPage(lastElement, pagesForPrint) {
+  if (resultArray.length === 0) return;
+
+  const lastElementIndex = pagesForPrint - 1;
+  const lastElement = resultArray[lastElementIndex];
+
   const newStringElement = `${lastElement.split(" - ")[0]} - ${allPages}`;
-  data.resultArray[pagesForPrint - 1] = newStringElement;
+  resultArray[lastElementIndex] = newStringElement;
 }
