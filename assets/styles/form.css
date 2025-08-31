@@ -22,4 +22,11 @@
   background-color: var(--secondary);
   font-size: 30px;
   color: var(--color-marker);
+  border: none;
+  transition: 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px 4px var(--color-marker);
+  }
 }

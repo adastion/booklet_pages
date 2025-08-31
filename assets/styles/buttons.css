@@ -7,11 +7,13 @@
   align-items: center;
   cursor: pointer;
   font-size: 24px;
+  border: none;
   transition: 0.2s ease-in;
 
   &:hover,
   &:focus {
     color: var(--secondary);
     background-color: var(--primary);
+    box-shadow: 0 0 5px 4px var(--color-marker);
   }
 }
