@@ -1,0 +1,9 @@
+:root {
+  --primary: rgb(234 233 255);
+  --secondary: rgb(70 70 71);
+  --form-bg: rgb(56 84 106);
+  --lighting: rgb(142, 155, 178);
+  --color-marker: rgb(94, 255, 209);
+  --main-radius: 8px;
+  --main-padding: 8px;
+}

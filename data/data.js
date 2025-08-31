@@ -39,8 +39,6 @@ export const data = {
   addToResultArray(value) {
     this._resultArray.push(value);
   },
-
-  // Метод для очистки массива
   clearResultArray() {
     this._resultArray = [];
   },

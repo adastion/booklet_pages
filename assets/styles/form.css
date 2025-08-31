@@ -1,0 +1,25 @@
+.form {
+  background-color: var(--form-bg);
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  display: grid;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    & + * {
+      margin-top: 20px;
+    }
+  }
+}
+
+.form__item {
+  display: grid;
+}
+
+.form__input {
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  background-color: var(--secondary);
+  font-size: 30px;
+  color: var(--color-marker);
+}

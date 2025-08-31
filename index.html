@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css">
-    <script type="module" src="/index.js" defer></script>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" >
+    <link rel="stylesheet" href="/style.css" >
     <title>Booklet pages</title>
   </head>
   <body>
     <div class="app">
-      <header class="header">
+      <header class="header container">
         <h1 class="header__title">
           Колькулятор расчёта(разбивки) страниц для буклета
         </h1>
         <p class="header__description">
-          Если вам нужно распечатать многостраничную книгу в формате А5
-          используя двустороннюю печать. То колькулятор поможет вам разбить на
-          удобное количество буклетов с нужным количеством листов в буклете.
+          Если вам нужно напечатать многостраничную книгу в формате А5 используя
+          двустороннюю печать. То колькулятор поможет вам раздробить на удобное
+          количество буклетов с нужным количеством листов в буклете.
+        </p>
+        <p class="header__description">
+          Полученный резуьтат это список диапазонов страниц. Диапазон страниц -
+          это страницы которые будут составлять один буклет в
+          <strong>ПРАВИЛЬНОМ ПОРЯДКЕ</strong>.
         </p>
       </header>
-      <form class="form">
-        <div class="form__item">
-          <label class="form__label" for="allPages"
-            >Сколько всего страниц в книге?</label
-          >
-          <input class="form__input" id="allPages" type="number" />
+      <div class="app__content container">
+        <form class="form">
+          <div class="form__item">
+            <label class="form__label" for="allPages"
+              >Сколько всего страниц в книге:</label
+            >
+            <input class="form__input" id="allPages" type="number" >
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="bookletPages"
+              >Из сколька листов формата А4 будет состоять буклет:</label
+            >
+            <input class="form__input" id="bookletPages" type="number" >
+          </div>
+          <button id="btn-calculate" type="button" class="btn form__btn">
+            Создать список
+          </button>
+        </form>
+        <div class="result">
+          <ol class="result__list"></ol>
         </div>
-        <div class="form__item">
-          <label class="form__label" for="bookletPages"
-            >Из сколька страниц будет состоять буклет?</label
-          >
-          <input class="form__input" id="bookletPages" type="number" />
-        </div>
-        <button id="btn-calculate" type="button" class="btn form__btn">
-          Создать список
-        </button>
-      </form>
-      <div class="result">
-        <ol class="result__list">
-
-        </ol>
       </div>
     </div>
+    <script type="module" src="/index.js"></script>
   </body>
 </html>

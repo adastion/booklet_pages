@@ -1,4 +1,4 @@
-import { data } from "../data/data.js";
+import { data } from "../../../data/data.js";
 
 export function correctingLastPage() {
   const { pagesForPrint, allPages, resultArray } = data;
