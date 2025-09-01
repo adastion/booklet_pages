@@ -16,11 +16,19 @@
   display: grid;
 }
 
+.form__label {
+  font-size: clamp(22px, 3vw, 25px);
+  
+  & + input {
+    margin-top: 10px;
+  } 
+}
+
 .form__input {
   border-radius: var(--main-radius);
   padding: var(--main-padding);
   background-color: var(--secondary);
-  font-size: 30px;
+  font-size: clamp(20px, 3.2vw, 30px);
   color: var(--color-marker);
   border: none;
   transition: 0.2s ease-in;

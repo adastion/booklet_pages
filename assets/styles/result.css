@@ -6,7 +6,7 @@
 .result__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 35px;
+  gap: 20px 10px;
   list-style: none;
   counter-reset: list-counter;
 
@@ -26,6 +26,7 @@
   align-items: center;
   counter-increment: list-counter;
   position: relative;
+  margin-left: 30px;
 
   &::before {
     content: counter(list-counter);
