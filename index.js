@@ -1,6 +1,7 @@
 import { renderResult } from "./assets/js/renderResult.js";
 import { createList } from "./assets/js/utils/createList.js";
 import { getDataFromForm } from "./assets/js/utils/getDataFromForm.js";
+import { selectColorTheme } from "./assets/js/utils/selectColorTheme.js";
 import { sliceData } from "./assets/js/utils/sliceData.js";
 
 const buttonCalc = document.getElementById("btn-calculate");
@@ -18,3 +19,5 @@ buttonCalc.addEventListener("click", (e) => {
 
   sliceData(resultList, renderResult);
 });
+
+selectColorTheme()
