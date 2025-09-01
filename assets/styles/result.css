@@ -46,5 +46,5 @@
   background-color: var(--lighting);
   padding: var(--main-padding);
   color: var(--color-marker);
-  font-size: 18px;
+  font-size: clamp(15px, 3.2vw, 20px);
 }
