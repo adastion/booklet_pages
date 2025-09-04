@@ -17,3 +17,7 @@
     box-shadow: 0 0 5px 4px var(--color-marker);
   }
 }
+
+.btn--theme {
+  padding: var(--main-padding);
+}

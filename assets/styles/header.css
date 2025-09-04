@@ -10,9 +10,28 @@
   }
 }
 
+.header__panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__logo {
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & img {
+    max-width: 46px;
+  }
+}
+
 .header__title {
   font-size: clamp(25px, 3.2vw, 34px);
-  
+
   & + * {
     margin-top: 30px;
   }

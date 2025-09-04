@@ -20,4 +20,4 @@ buttonCalc.addEventListener("click", (e) => {
   sliceData(resultList, renderResult);
 });
 
-selectColorTheme()
+selectColorTheme();
