@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
   border: none;
   transition: 0.2s ease-in;
 
