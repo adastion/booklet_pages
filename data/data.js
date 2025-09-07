@@ -45,6 +45,10 @@ export const data = {
   get listInfo() {
     return [
       {
+        name: "Требуется листов А4",
+        value: this.resultArray.length * this.bookletSize,
+      },
+      {
         name: "Всего буклетов",
         value: this.resultArray.length,
       },
