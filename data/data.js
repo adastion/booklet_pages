@@ -46,7 +46,7 @@ export const data = {
     return [
       {
         name: "Требуется листов А4",
-        value: Math.round(this.allPages / 4),
+        value: Math.ceil(this.allPages / 4),
       },
       {
         name: "Всего буклетов",
