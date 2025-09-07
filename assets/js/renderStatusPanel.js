@@ -1,20 +1,7 @@
 import { data } from "../../data/data.js";
 
 export function renderStatusPanel() {
-  const listInfo = [
-    {
-      name: "Всего буклетов",
-      value: data.resultArray.length,
-    },
-    {
-      name: "Cтраниц в буклете",
-      value: data.bookletPages,
-    },
-    {
-      name: "Из сколька страниц состоит книга",
-      value: data.allPages,
-    },
-  ];
+  const listInfo = data.listInfo
 
   const statusElement = document.createElement("ul");
   statusElement.classList.add("app__info-list");

@@ -9,7 +9,7 @@ export function renderResult(parentElement, dataItem) {
 
   const buttonForCopyElement = ButtonForCopy(
     dataItem,
-    "./assets/icons/copy-svgrepo-com.svg"
+    "#icon-copy"
   );
 
   contentElement.textContent = dataItem;

@@ -42,6 +42,22 @@ export const data = {
   get resultArray() {
     return this._resultArray;
   },
+  get listInfo() {
+    return [
+      {
+        name: "Всего буклетов",
+        value: this.resultArray.length,
+      },
+      {
+        name: "Cтраниц в буклете",
+        value: this.bookletPages,
+      },
+      {
+        name: "Страниц в книге",
+        value: this.allPages,
+      },
+    ];
+  },
   addToResultArray(value) {
     this._resultArray.push(value);
     this.noify();

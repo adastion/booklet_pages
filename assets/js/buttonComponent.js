@@ -7,12 +7,25 @@ export function ButtonForCopy(data, src, name) {
   }
 
   if (src) {
-    const imageElement = document.createElement("img");
-    imageElement.alt = "icon";
-    imageElement.src = src;
-    imageElement.style = "width: 25px;";
+    const svgElement = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    const useElement = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "use"
+    );
 
-    buttonElement.append(imageElement);
+    useElement.setAttributeNS(
+      "http://www.w3.org/1999/xlink",
+      "xlink:href",
+      src
+    );
+
+    svgElement.classList.add("icon");
+
+    svgElement.append(useElement);
+    buttonElement.append(svgElement);
   }
 
   buttonElement.addEventListener("click", (e) => {

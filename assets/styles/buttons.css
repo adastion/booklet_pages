@@ -2,6 +2,7 @@
   border-radius: var(--main-radius);
   padding: 4px 2px;
   background-color: var(--lighting);
+  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;

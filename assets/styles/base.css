@@ -24,17 +24,14 @@ body[data-theme="light"] {
   --secondary: rgb(250 250 250);
   --form-bg: rgb(150 222 255);
   --lighting: rgb(214 249 255);
-  --color-marker: rgb(47 171 9);
+  --color-marker: rgb(40 87 255);
 }
 
 body {
   font-size: 26px;
   color: var(--primary);
   background-color: var(--secondary);
-
-  & * {
-    color: var(--primary);
-  }
+  color: var(--primary);
 }
 
 .app {
@@ -84,4 +81,10 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1440px;
+}
+
+.icon {
+  color: inherit;
+  width: 25px;
+  height: 25px;
 }
