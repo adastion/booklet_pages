@@ -46,7 +46,7 @@ export const data = {
     return [
       {
         name: "Требуется листов А4",
-        value: this.resultArray.length * this.bookletSize,
+        value: Math.round(this.allPages / 4),
       },
       {
         name: "Всего буклетов",

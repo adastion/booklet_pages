@@ -10,7 +10,7 @@
   font-size: clamp(18px, 3vw, 24px);
   border: none;
   transition: 0.2s ease-in;
-
+  
   &:hover,
   &:focus {
     color: var(--secondary);
@@ -21,4 +21,5 @@
 
 .btn--theme {
   padding: var(--main-padding);
+  font-size: clamp(16px, 3vw, 18px);
 }
