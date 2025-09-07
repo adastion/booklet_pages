@@ -5,15 +5,14 @@ export function selectColorTheme() {
   const colrorThemeList = ["dark", "light"];
 
   let currentTheme = localStorage.getItem("theme");
-  const nameForTheElement =
-    currentTheme === "dark" ? "Включить светлю тему" : "Включить тёмную тему";
 
   if (currentTheme === null) {
     currentTheme = colrorThemeList[0];
     bodyElement.dataset.theme = currentTheme;
   }
   bodyElement.dataset.theme = currentTheme;
-  triggerElement.textContent = nameForTheElement;
+  triggerElement.textContent =
+    currentTheme === "dark" ? "Включить светлю тему" : "Включить тёмную тему";
 
   triggerElement.addEventListener("click", (e) => {
     if (currentTheme === colrorThemeList[0]) {
@@ -24,6 +23,7 @@ export function selectColorTheme() {
 
     localStorage.setItem("theme", currentTheme);
     bodyElement.dataset.theme = currentTheme;
-    e.currentTarget.textContent = nameForTheElement;
+    e.currentTarget.textContent =
+      currentTheme === "dark" ? "Включить светлю тему" : "Включить тёмную тему";
   });
 }
