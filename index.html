@@ -13,7 +13,7 @@
         <div class="header__panel">
           <div class="header__logo">
             <a href="./">
-              <img src="./favicon.svg" alt="logo">
+              <img src="./favicon.svg" alt="logo" />
             </a>
           </div>
           <button class="btn btn--theme" id="theme-trigger"></button>
@@ -23,28 +23,29 @@
         </h1>
         <p class="header__description">
           Если вам нужно напечатать многостраничную книгу в формате А5 используя
-          двустороннюю печать. Этот калькулятор поможет вам раздробить на удобное
-          количество буклетов с нужным количеством листов в буклете.
+          двустороннюю печать. Этот калькулятор поможет вам раздробить на
+          удобное количество буклетов с нужным количеством листов в буклете.
         </p>
         <p class="header__description">
-          Полученный результат - это список диапазонов страниц. Диапазон страниц -
-          это страницы которые будут составлять один буклет в
+          Полученный результат - это список диапазонов страниц. Диапазон страниц
+          - это страницы которые будут составлять один буклет в
           <strong>ПРАВИЛЬНОМ ПОРЯДКЕ</strong>.
         </p>
       </header>
+      <div class="app__info"></div>
       <div class="app__content">
         <form class="form">
           <div class="form__item">
             <label class="form__label" for="allPages"
               >Сколько всего страниц в книге:</label
             >
-            <input class="form__input" id="allPages" type="number" >
+            <input class="form__input" id="allPages" type="number" />
           </div>
           <div class="form__item">
             <label class="form__label" for="bookletPages"
               >Из сколька листов формата А4 будет состоять буклет:</label
             >
-            <input class="form__input" id="bookletPages" type="number" >
+            <input class="form__input" id="bookletPages" type="number" />
           </div>
           <button id="btn-calculate" type="button" class="btn form__btn">
             Создать список

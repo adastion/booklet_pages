@@ -1,6 +1,6 @@
 import { ButtonForCopy } from "./../../assets/js/buttonComponent.js";
 
-export function renderResult(parentElement, arrayData) {
+export function renderResult(parentElement, dataItem) {
   const listItemElement = document.createElement("li");
   listItemElement.classList.add("result__item");
 
@@ -8,11 +8,11 @@ export function renderResult(parentElement, arrayData) {
   contentElement.classList.add("result__content");
 
   const buttonForCopyElement = ButtonForCopy(
-    arrayData,
+    dataItem,
     "./assets/icons/copy-svgrepo-com.svg"
   );
 
-  contentElement.textContent = arrayData.join(", ");
+  contentElement.textContent = dataItem;
 
   listItemElement.append(contentElement, buttonForCopyElement);
   parentElement.append(listItemElement);

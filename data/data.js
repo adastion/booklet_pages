@@ -6,9 +6,12 @@ export const data = {
   },
 
   set allPages(value) {
-    return typeof value === "number"
-      ? (this._allPages = value)
-      : (this._allPages = NaN);
+    return (
+      typeof value === "number"
+        ? (this._allPages = value)
+        : (this._allPages = NaN),
+      this.noify()
+    );
   },
 
   get bookletSize() {
@@ -16,9 +19,12 @@ export const data = {
   },
 
   set bookletSize(value) {
-    return typeof value === "number"
-      ? (this._bookletSize = value)
-      : (this._bookletSize = NaN);
+    return (
+      typeof value === "number"
+        ? (this._bookletSize = value)
+        : (this._bookletSize = NaN),
+      this.noify()
+    );
   },
   get bookletPages() {
     return this.bookletSize * 4;
@@ -38,8 +44,21 @@ export const data = {
   },
   addToResultArray(value) {
     this._resultArray.push(value);
+    this.noify();
   },
   clearResultArray() {
     this._resultArray = [];
+  },
+  _subscribers: [],
+  subscribe(subscriber) {
+    return this._subscribers.push(subscriber);
+  },
+  noify() {
+    return this._subscribers.forEach((subscriber) => subscriber());
+  },
+  setData(pages, bookletPages) {
+    return (
+      (this._allPages = pages), (this._bookletSize = bookletPages), this.noify()
+    );
   },
 };

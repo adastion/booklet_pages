@@ -1,23 +1,33 @@
 import { renderResult } from "./assets/js/renderResult.js";
+import { renderStatusPanel } from "./assets/js/renderStatusPanel.js";
 import { createList } from "./assets/js/utils/createList.js";
 import { getDataFromForm } from "./assets/js/utils/getDataFromForm.js";
 import { selectColorTheme } from "./assets/js/utils/selectColorTheme.js";
 import { sliceData } from "./assets/js/utils/sliceData.js";
+import { data } from "./data/data.js";
 
-const buttonCalc = document.getElementById("btn-calculate");
-const resultList = document.querySelector(".result__list");
-const fieldForAllPages = document.getElementById("allPages");
-const fieldForBooklet = document.getElementById("bookletPages");
+const buttonCalcElement = document.getElementById("btn-calculate");
+const dataPanelElement = document.querySelector(".app__info");
+const resultListElement = document.querySelector(".result__list");
+const fieldForAllPagesElement = document.getElementById("allPages");
+const fieldForBookletElement = document.getElementById("bookletPages");
 
-buttonCalc.addEventListener("click", (e) => {
+buttonCalcElement.addEventListener("click", (e) => {
   e.preventDefault();
-  resultList.innerHTML = "";
+  resultListElement.innerHTML = "";
 
-  getDataFromForm(fieldForAllPages, fieldForBooklet);
+  getDataFromForm(fieldForAllPagesElement, fieldForBookletElement);
 
   createList();
 
-  sliceData(resultList, renderResult);
+  sliceData(resultListElement, renderResult);
+});
+
+dataPanelElement.append(renderStatusPanel());
+
+data.subscribe(() => {
+  dataPanelElement.innerHTML = "";
+  dataPanelElement.append(renderStatusPanel());
 });
 
 selectColorTheme();

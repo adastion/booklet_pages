@@ -57,6 +57,30 @@ body {
   }
 }
 
+.app__info {
+  & + * {
+    margin-top: 50px;
+  }
+}
+
+.app__info-list {
+  & li {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    & h2 {
+      font-size: clamp(18px, 3.3vw, 28px);
+    }
+
+    & span {
+      color: var(--color-marker);
+      font-size: 26px;
+    }
+  }
+}
+
 .container {
   margin: 0 auto;
   max-width: 1440px;
