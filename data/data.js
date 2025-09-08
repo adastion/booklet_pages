@@ -7,7 +7,7 @@ export const data = {
 
   set allPages(value) {
     return (
-      typeof value === "number"
+      typeof value === "number" && value <= 6000
         ? (this._allPages = value)
         : (this._allPages = NaN),
       this.noify()
