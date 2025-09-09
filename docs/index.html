@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="shortcut icon" href="/booklet_pages/assets/favicon-Bt0aG2ii.svg" type="image/x-icon" >
+    <title>Booklet pages</title>
+    <script type="module" crossorigin src="/booklet_pages/assets/index-B7xwfO-x.js"></script>
+    <link rel="stylesheet" crossorigin href="/booklet_pages/assets/index-BfX7U_KN.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="header container">
+        <div class="header__panel">
+          <div class="header__logo">
+            <a href="/booklet_pages">
+              <img src="/booklet_pages/assets/favicon-Bt0aG2ii.svg" alt="logo" >
+            </a>
+          </div>
+          <button class="btn btn--theme" id="theme-trigger"></button>
+        </div>
+        <h1 class="header__title">
+          Калькулятор расчёта(разбивки) страниц для буклета
+        </h1>
+        <p class="header__description">
+          Если вам нужно напечатать многостраничную книгу в формате А5 используя
+          двустороннюю печать. Этот калькулятор поможет вам раздробить на
+          удобное количество буклетов с нужным количеством листов в буклете.
+        </p>
+        <p class="header__description">
+          Полученный результат - это список диапазонов страниц. Диапазон страниц
+          - это страницы которые будут составлять один буклет в
+          <strong>ПРАВИЛЬНОМ ПОРЯДКЕ</strong>.
+        </p>
+      </header>
+      <div class="app__info"></div>
+      <div class="app__content">
+        <form class="form">
+          <div class="form__item">
+            <label class="form__label" for="allPages"
+              >Сколько всего страниц в книге:</label
+            >
+            <input class="form__input" id="allPages" type="number" >
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="bookletPages"
+              >Из сколька листов формата А4 будет состоять буклет:</label
+            >
+            <input class="form__input" id="bookletPages" type="number" >
+          </div>
+          <button id="btn-calculate" type="button" class="btn form__btn">
+            Создать список
+          </button>
+        </form>
+        <div class="result">
+          <ol class="result__list"></ol>
+        </div>
+      </div>
+    </div>
+
+    <svg width="0" height="0" hidden>
+      <symbol
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        id="icon-copy"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M19.5 16.5L19.5 4.5L18.75 3.75H9L8.25 4.5L8.25 7.5L5.25 7.5L4.5 8.25V20.25L5.25 21H15L15.75 20.25V17.25H18.75L19.5 16.5ZM15.75 15.75L15.75 8.25L15 7.5L9.75 7.5V5.25L18 5.25V15.75H15.75ZM6 9L14.25 9L14.25 19.5L6 19.5L6 9Z"
+          fill="currentColor"
+        ></path>
+      </symbol>
+    </svg>
+  </body>
+</html>

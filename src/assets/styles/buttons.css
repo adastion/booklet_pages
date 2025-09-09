@@ -1,0 +1,25 @@
+.btn {
+  border-radius: var(--main-radius);
+  padding: 4px 2px;
+  background-color: var(--lighting);
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: clamp(18px, 3vw, 24px);
+  border: none;
+  transition: 0.2s ease-in;
+  
+  &:hover,
+  &:focus {
+    color: var(--secondary);
+    background-color: var(--primary);
+    box-shadow: 0 0 5px 4px var(--color-marker);
+  }
+}
+
+.btn--theme {
+  padding: var(--main-padding);
+  font-size: clamp(16px, 3vw, 18px);
+}
