@@ -1,4 +1,4 @@
-import { ButtonForCopy } from "./../../assets/js/buttonComponent.js";
+import { ButtonForCopy } from './buttonComponent.js';
 
 export function renderResult(parentElement, dataItem) {
   const listItemElement = document.createElement("li");

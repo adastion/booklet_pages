@@ -1,3 +1,4 @@
+import "./style.css";
 import { renderResult } from "./assets/js/renderResult.js";
 import { renderStatusPanel } from "./assets/js/renderStatusPanel.js";
 import { createList } from "./assets/js/utils/createList.js";
