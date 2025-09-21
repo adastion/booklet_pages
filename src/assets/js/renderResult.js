@@ -1,8 +1,6 @@
 import { ButtonForCopy } from './buttonComponent.js';
 
 export function renderResult(parentElement, dataItem) {
-  console.log(dataItem)
-  
   
   const listItemElement = document.createElement("li");
   listItemElement.classList.add("result__item");
