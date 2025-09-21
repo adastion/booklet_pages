@@ -1,4 +1,4 @@
-import { ButtonForCopy } from './buttonComponent.js';
+import { buttonForCopy } from './buttonComponent.js';
 
 export function renderResult(parentElement, dataItem) {
   
@@ -12,7 +12,7 @@ export function renderResult(parentElement, dataItem) {
   const contentElement = document.createElement("code");
   contentElement.classList.add("result__content");
   
-  const buttonForCopyElement = ButtonForCopy(
+  const buttonForCopyElement = buttonForCopy(
     dataItem,
     "#icon-copy"
   );

@@ -10,7 +10,7 @@
   font-size: clamp(18px, 3vw, 24px);
   border: none;
   transition: 0.2s ease-in;
-  
+
   &:hover,
   &:focus {
     color: var(--secondary);
@@ -22,4 +22,17 @@
 .btn--theme {
   padding: var(--main-padding);
   font-size: clamp(16px, 3vw, 18px);
+}
+
+.btn__animate {
+  animation: completedCopy 0.3s ease-in-out;
+}
+
+@keyframes completedCopy {
+  0% {
+    transform: translateY(10px) scale(0.1);
+  }
+  100% {
+    transform: translateY(-10) scale(1);
+  }
 }

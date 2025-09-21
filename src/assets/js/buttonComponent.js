@@ -1,4 +1,6 @@
-export function ButtonForCopy(data, src, name) {
+import { completedCopy } from "./complietedCopy.js";
+
+export function buttonForCopy(data, src, name) {
   const buttonElement = document.createElement("button");
   buttonElement.classList.add("btn");
 
@@ -30,19 +32,26 @@ export function ButtonForCopy(data, src, name) {
 
   buttonElement.addEventListener("click", (e) => {
     e.preventDefault();
+    completedCopy(e.currentTarget);
+
     if (data.isActive) {
       const resultItemElement = e.currentTarget.parentElement;
-      resultItemElement.classList.add("result__item--disabled");
 
-      const resultContentElement = resultItemElement.querySelector(".result__content");
+      setTimeout(() => {
+        resultItemElement.classList.add("result__item--disabled");
+      }, 900);
+
+      const resultContentElement =
+        resultItemElement.querySelector(".result__content");
       resultContentElement.addEventListener("click", (e) => {
-        e.currentTarget.parentElement.classList.remove("result__item--disabled");
+        e.currentTarget.parentElement.classList.remove(
+          "result__item--disabled"
+        );
       });
     }
 
     navigator.clipboard
       .writeText(data.value)
-      .then(() => alert("Результат скапирован👌"))
       .catch((err) => console.error("Ошибка копирования: ", err));
   });
 
