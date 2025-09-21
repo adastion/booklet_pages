@@ -27,6 +27,7 @@
   }
   & img {
     max-width: 46px;
+    max-width: clamp(20px, 3.69vw, 46px);
   }
 }
 

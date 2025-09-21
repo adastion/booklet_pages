@@ -30,8 +30,7 @@ export function ButtonForCopy(data, src, name) {
 
   buttonElement.addEventListener("click", (e) => {
     e.preventDefault();
-
-    if (!data.isActive) {
+    if (data.isActive) {
       const resultItemElement = e.currentTarget.parentElement;
       resultItemElement.classList.add("result__item--disabled");
 

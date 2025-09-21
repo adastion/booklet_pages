@@ -13,7 +13,7 @@ export function renderResult(parentElement, dataItem) {
   contentElement.classList.add("result__content");
   
   const buttonForCopyElement = ButtonForCopy(
-    dataItem.value,
+    dataItem,
     "#icon-copy"
   );
   
