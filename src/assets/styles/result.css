@@ -45,6 +45,23 @@
   }
 }
 
+.result__item--disabled {
+  opacity: 0.4;
+  text-decoration: line-through;
+
+  &:has(code:hover) {
+    text-decoration: none;
+  }
+
+  & code {
+    cursor: pointer;
+  }
+
+  & button {
+    pointer-events: none;
+  }
+}
+
 .result__content {
   border-radius: var(--main-radius);
   background-color: var(--lighting);

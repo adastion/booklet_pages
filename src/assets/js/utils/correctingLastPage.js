@@ -6,8 +6,8 @@ export function correctingLastPage() {
   if (resultArray.length === 0) return;
 
   const lastElementIndex = pagesForPrint - 1;
-  const lastElement = resultArray[lastElementIndex];
+  const lastElement = resultArray[lastElementIndex].value;
 
   const newStringElement = `${lastElement.split(" - ")[0]} - ${allPages}`;
-  resultArray[lastElementIndex] = newStringElement;
+  resultArray[lastElementIndex].value = newStringElement;
 }

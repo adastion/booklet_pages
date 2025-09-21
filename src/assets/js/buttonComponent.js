@@ -31,8 +31,18 @@ export function ButtonForCopy(data, src, name) {
   buttonElement.addEventListener("click", (e) => {
     e.preventDefault();
 
+    if (!data.isActive) {
+      const resultItemElement = e.currentTarget.parentElement;
+      resultItemElement.classList.add("result__item--disabled");
+
+      const resultContentElement = resultItemElement.querySelector(".result__content");
+      resultContentElement.addEventListener("click", (e) => {
+        e.currentTarget.parentElement.classList.remove("result__item--disabled");
+      });
+    }
+
     navigator.clipboard
-      .writeText(data)
+      .writeText(data.value)
       .then(() => alert("Результат скапирован👌"))
       .catch((err) => console.error("Ошибка копирования: ", err));
   });

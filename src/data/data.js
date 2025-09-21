@@ -63,7 +63,7 @@ export const data = {
     ];
   },
   addToResultArray(value) {
-    this._resultArray.push(value);
+    this._resultArray.push({value: value, isActive: true});
     this.noify();
   },
   clearResultArray() {
