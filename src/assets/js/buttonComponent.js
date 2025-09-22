@@ -39,7 +39,7 @@ export function buttonForCopy(data, src, name) {
 
       setTimeout(() => {
         resultItemElement.classList.add("result__item--disabled");
-      }, 900);
+      }, 450);
 
       const resultContentElement =
         resultItemElement.querySelector(".result__content");

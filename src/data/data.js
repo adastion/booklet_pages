@@ -4,26 +4,23 @@ export const data = {
   get allPages() {
     return this._allPages;
   },
-
   set allPages(value) {
     return (
       typeof value === "number" && value <= 6000
         ? (this._allPages = value)
         : (this._allPages = NaN),
-      this.noify()
+      this.notify()
     );
   },
-
   get bookletSize() {
     return this._bookletSize;
   },
-
   set bookletSize(value) {
     return (
       typeof value === "number"
         ? (this._bookletSize = value)
         : (this._bookletSize = NaN),
-      this.noify()
+      this.notify()
     );
   },
   get bookletPages() {
@@ -46,7 +43,7 @@ export const data = {
     return [
       {
         name: "Требуется листов А4",
-        value: Math.ceil(this.allPages / 4),
+        value: Math.ceil(this._allPages / 4)
       },
       {
         name: "Всего буклетов",
@@ -63,22 +60,22 @@ export const data = {
     ];
   },
   addToResultArray(value) {
-    this._resultArray.push({value: value, isActive: true});
-    this.noify();
+    this._resultArray.push({ value: value, isActive: true });
+    this.notify();
   },
   clearResultArray() {
     this._resultArray = [];
   },
   _subscribers: [],
   subscribe(subscriber) {
-    return this._subscribers.push(subscriber);
+    this._subscribers.push(subscriber);
   },
-  noify() {
-    return this._subscribers.forEach((subscriber) => subscriber());
+  notify() {
+    this._subscribers.forEach((subscriber) => subscriber());
   },
   setData(pages, bookletPages) {
-    return (
-      (this._allPages = pages), (this._bookletSize = bookletPages), this.noify()
-    );
+      this._allPages = pages;
+      this._bookletSize = bookletPages;
+      this.notify();
   },
 };

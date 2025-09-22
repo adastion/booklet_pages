@@ -1,7 +1,7 @@
 import { data } from "../../data/data.js";
 
 export function renderStatusPanel() {
-  const listInfo = data.listInfo
+  const listInfo = data.listInfo;
 
   const statusElement = document.createElement("ul");
   statusElement.classList.add("app__info-list");
