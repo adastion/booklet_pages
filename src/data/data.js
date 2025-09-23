@@ -39,11 +39,26 @@ export const data = {
   get resultArray() {
     return this._resultArray;
   },
+  _pagesA4: 0,
+  initPagesA4() {
+    this._pagesA4 = Math.ceil(this._allPages / 4);
+    this.notify();
+  },
+  decrementA4() {
+    this._pagesA4 -= this.bookletSize;
+    this.notify();
+    console.log(this._pagesA4);
+  },
+  incrementA4() {
+    this._pagesA4 += this.bookletSize;
+    this.notify();
+    console.log(this._pagesA4);
+  },
   get listInfo() {
     return [
       {
         name: "Требуется листов А4",
-        value: Math.ceil(this._allPages / 4)
+        value: this._pagesA4,
       },
       {
         name: "Всего буклетов",
@@ -74,8 +89,8 @@ export const data = {
     this._subscribers.forEach((subscriber) => subscriber());
   },
   setData(pages, bookletPages) {
-      this._allPages = pages;
-      this._bookletSize = bookletPages;
-      this.notify();
+    this._allPages = pages;
+    this._bookletSize = bookletPages;
+    this.notify();
   },
 };

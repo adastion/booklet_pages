@@ -4,7 +4,7 @@ import { correctingLastPage } from "./correctingLastPage.js";
 export function createList() {
   data.clearResultArray();
 
-  const { pagesForPrint, bookletPages } = data;
+  const { pagesForPrint, bookletPages} = data;
   let firstPageCount = 1;
   let lastPageCount = bookletPages;
 
@@ -15,4 +15,5 @@ export function createList() {
   }
 
   correctingLastPage();
+  data.initPagesA4();
 }

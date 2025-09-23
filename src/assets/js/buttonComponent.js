@@ -1,4 +1,5 @@
 import { completedCopy } from "./complietedCopy.js";
+import { data as dataState } from "./../../data/data";
 
 export function buttonForCopy(data, src, name) {
   const buttonElement = document.createElement("button");
@@ -32,22 +33,26 @@ export function buttonForCopy(data, src, name) {
 
   buttonElement.addEventListener("click", (e) => {
     e.preventDefault();
+    dataState.decrementA4();
     completedCopy(e.currentTarget);
 
     if (data.isActive) {
       const resultItemElement = e.currentTarget.parentElement;
 
-      setTimeout(() => {
-        resultItemElement.classList.add("result__item--disabled");
-      }, 450);
+      resultItemElement.classList.add("result__item--disabled");
+      setTimeout(() => {}, 450);
 
-      const resultContentElement =
-        resultItemElement.querySelector(".result__content");
-      resultContentElement.addEventListener("click", (e) => {
-        e.currentTarget.parentElement.classList.remove(
-          "result__item--disabled"
-        );
-      });
+      const resultContentElement = resultItemElement.querySelector(".result__content");
+      resultContentElement.addEventListener(
+        "click",
+        (e) => {
+          dataState.incrementA4();
+          e.currentTarget.parentElement.classList.remove(
+            "result__item--disabled"
+          );
+        },
+        { once: true }
+      );
     }
 
     navigator.clipboard
