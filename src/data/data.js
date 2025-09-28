@@ -47,12 +47,10 @@ export const data = {
   decrementA4() {
     this._pagesA4 -= this.bookletSize;
     this.notify();
-    console.log(this._pagesA4);
   },
   incrementA4() {
     this._pagesA4 += this.bookletSize;
     this.notify();
-    console.log(this._pagesA4);
   },
   get listInfo() {
     return [

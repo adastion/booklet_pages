@@ -17,6 +17,8 @@ body[data-theme="dark"] {
   --form-bg: rgb(56 84 106);
   --lighting: rgb(142, 155, 178);
   --color-marker: rgb(94, 255, 209);
+  --warning: rgb(255 255 255);
+  --warning-bg: #ff9800;
 }
 
 body[data-theme="light"] {
@@ -25,6 +27,8 @@ body[data-theme="light"] {
   --form-bg: rgb(150 222 255);
   --lighting: rgb(214 249 255);
   --color-marker: rgb(40 87 255);
+  --warning: rgb(240 255 237);
+  --warning-bg: #fe482d;
 }
 
 body {
@@ -64,7 +68,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  
+
   @media screen and (max-width: 564px) {
     grid-template-columns: auto;
   }
@@ -95,4 +99,9 @@ body {
   color: inherit;
   width: 25px;
   height: 25px;
+}
+
+.relative {
+  position: relative;
+  z-index: 1;
 }

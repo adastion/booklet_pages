@@ -1,0 +1,53 @@
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  text-wrap: balance;
+}
+
+.modal--animate {
+  animation: animateModal 1.5s ease;
+}
+
+.modal--animate-warning {
+  animation: animateWarning 0.3s ease;
+}
+
+.modal--warning {
+  color: var(--warning);
+  background-color: var(--warning-bg);
+}
+
+@keyframes animateModal {
+  0% {
+    transform: translateX(-150%) rotate(3deg);
+  }
+  25% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-350%) rotate(3deg);
+  }
+}
+
+@keyframes animateWarning {
+  0% {
+    transform: translateX(-150%) rotate(3deg);
+  }
+  100% {
+    transform: translate(-50%, -50.7%) rotate(0deg);
+  }
+}

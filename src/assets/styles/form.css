@@ -4,6 +4,7 @@
   padding: var(--main-padding);
   display: grid;
   gap: 20px;
+  position: relative;
 
   @media (max-width: 768px) {
     & + * {

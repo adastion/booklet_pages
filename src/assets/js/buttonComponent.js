@@ -1,5 +1,6 @@
 import { completedCopy } from "./complietedCopy.js";
-import { data as dataState } from "./../../data/data";
+import { data as dataState } from "./../../data/data.js";
+import { callMessage } from "./utils/callMessage.js";
 
 export function buttonForCopy(data, src, name) {
   const buttonElement = document.createElement("button");
@@ -38,9 +39,16 @@ export function buttonForCopy(data, src, name) {
 
     if (data.isActive) {
       const resultItemElement = e.currentTarget.parentElement;
+      callMessage({
+        parentElement: document.querySelector("body"),
+        message: `Cкопирован👌: ${
+          resultItemElement.querySelector("code").textContent
+        }`,
+        time: 1500,
+        isWarning: false,
+      });
 
       resultItemElement.classList.add("result__item--disabled");
-      setTimeout(() => {}, 450);
 
       const resultContentElement = resultItemElement.querySelector(".result__content");
       resultContentElement.addEventListener(
