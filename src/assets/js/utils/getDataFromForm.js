@@ -11,7 +11,7 @@ export function getDataFromForm(valueAllPages, valueBookletSize) {
   } else {
     callMessage({
       parentElement: document.querySelector(".form"),
-      message: " Страниц в книге максиму - 6000, Листов А4 максимум - 100",
+      message: "🤔 Страниц в книге максиму - 6000, Листов А4 максимум - 100",
       time: null,
       isWarning: true,
     });

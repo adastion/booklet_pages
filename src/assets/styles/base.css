@@ -17,8 +17,7 @@ body[data-theme="dark"] {
   --form-bg: rgb(56 84 106);
   --lighting: rgb(142, 155, 178);
   --color-marker: rgb(94, 255, 209);
-  --warning: rgb(255 255 255);
-  --warning-bg: #ff9800;
+  --warning: #ffaa49;
 }
 
 body[data-theme="light"] {
@@ -28,7 +27,7 @@ body[data-theme="light"] {
   --lighting: rgb(214 249 255);
   --color-marker: rgb(40 87 255);
   --warning: rgb(240 255 237);
-  --warning-bg: #fe482d;
+  --warning: #ffea00;
 }
 
 body {

@@ -1,4 +1,6 @@
 :root {
+  --info: white;
+  --info-bg: lightslategray;
   --main-radius: 8px;
   --main-padding: 8px;
 }

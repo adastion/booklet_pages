@@ -12,6 +12,22 @@
   text-wrap: balance;
 }
 
+.modal__content {
+  background-color: var(--info-bg);
+  color: var(--info);
+  padding: var(--main-padding);
+  border-radius: var(--main-radius);
+}
+
+.modal__btn {
+  background-color: var(--info-bg);
+  color: var(--info);
+}
+
+.modal--warning {
+  color: var(--warning);
+}
+
 .modal--animate {
   animation: animateModal 1.5s ease;
 }
@@ -20,9 +36,8 @@
   animation: animateWarning 0.3s ease;
 }
 
-.modal--warning {
-  color: var(--warning);
-  background-color: var(--warning-bg);
+.modal--animate-warning-reverse {
+  animation: animateWarningReverse 0.3s ease;
 }
 
 @keyframes animateModal {
@@ -49,5 +64,14 @@
   }
   100% {
     transform: translate(-50%, -50.7%) rotate(0deg);
+  }
+}
+
+@keyframes animateWarningReverse {
+  0% {
+    transform: translate(-50%, -50.7%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-150%) rotate(3deg);
   }
 }
