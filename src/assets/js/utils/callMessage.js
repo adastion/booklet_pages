@@ -12,6 +12,6 @@ export function callMessage({ parentElement, message, time, isWarning }) {
     () => {
       if (modalElement && isWarning === false) modalElement.remove();
     },
-    time ? time : 1000
+    time ? time : 3000
   );
 }
